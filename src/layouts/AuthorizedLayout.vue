@@ -8,6 +8,7 @@
         <v-list-item exact title="Message Forwarder" to="/" />
         <v-list-item title="Tag Grouper" to="/tag-grouper" />
         <v-list-item title="Tag Forwarder" to="/tag-forwarder" />
+        <v-list-item title="Bot Chats" to="/bot-chats" />
         <v-list-item title="Log out" append-icon="mdi-logout" @click="authStore.logout()" />
       </v-list>
     </v-navigation-drawer>

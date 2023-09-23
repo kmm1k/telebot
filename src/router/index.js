@@ -6,6 +6,7 @@ import TagGrouperView from '@/views/TagGrouperView.vue'
 import LoginView from '@/views/LoginView.vue'
 import TagForwarderView from '@/views/TagForwarderView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+import BotChatsView from "@/views/BotChatsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +36,11 @@ const router = createRouter({
           path: 'tag-forwarder',
           name: 'tagForwarder',
           component: TagForwarderView,
+        },
+        {
+          path: 'bot-chats',
+          name: 'botChats',
+          component: BotChatsView,
         },
       ],
     },
