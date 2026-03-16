@@ -206,5 +206,5 @@ const saveTagForward = async () => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/components/form';
+@use '@/assets/scss/components/form';
 </style>

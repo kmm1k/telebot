@@ -56,5 +56,5 @@ const updateForwardRow = (index, item) => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/views/default';
+@use '@/assets/scss/views/default';
 </style>

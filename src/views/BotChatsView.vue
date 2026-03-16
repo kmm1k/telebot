@@ -3,9 +3,10 @@
     <h1 class="text-h4 mb-10">Bot Chats</h1>
     <div class="telebot-view__list">
       <span
-          v-for="(chat, _) in chats"
-          :key="'chat-' + (chat.id || chat.uniqueKey)"
-          class="telebot-view__list-item">
+        v-for="(chat, _) in chats"
+        :key="'chat-' + (chat.id || chat.uniqueKey)"
+        class="telebot-view__list-item"
+      >
         <v-card>
           <v-card-title>
             <h2 class="text-h5">{{ chat.chat_id }}</h2>
@@ -20,15 +21,15 @@
 </template>
 
 <script setup>
-import {useGetBotChatsQuery} from '@/queries/bot-chats.query'
-import {onBeforeMount, ref} from 'vue'
+import { useGetBotChatsQuery } from '@/queries/bot-chats.query'
+import { onBeforeMount, ref } from 'vue'
 
 const chats = ref([])
 
-const {data: botChats, suspense: suspenseBotChats} = useGetBotChatsQuery()
+const { data: botChats, suspense: suspenseBotChats } = useGetBotChatsQuery()
 
 const addTagGroupRow = () => {
-  chats.value.push({uniqueKey: Date.now()})
+  chats.value.push({ uniqueKey: Date.now() })
 }
 
 onBeforeMount(async () => {
@@ -39,9 +40,8 @@ onBeforeMount(async () => {
     addTagGroupRow()
   }
 })
-
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/views/default';
+@use '@/assets/scss/views/default';
 </style>

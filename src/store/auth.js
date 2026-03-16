@@ -25,8 +25,9 @@ export const useAuthStore = defineStore('auth', () => {
       token.value = data.token
       localStorage.setItem(TOKEN_KEY, data.token)
 
-      if (route.query.next) {
-        await router.push(route.query.next)
+      const next = route.query.next
+      if (next && typeof next === 'string' && next.startsWith('/') && !next.startsWith('//')) {
+        await router.push(next)
       } else {
         await router.push({
           name: 'messageForwarder',
